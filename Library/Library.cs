@@ -80,11 +80,11 @@ namespace Library
             throw new ArgumentException("That is not a valid student.");
         }
 
-        public Book GetBook(string name)
+        public Book GetBook(string title)
         {
             foreach (Book book in books)
             {
-                if (book.Title == name)
+                if (book.Title == title)
                 {
                     return book;
                 }

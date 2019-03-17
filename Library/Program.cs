@@ -190,5 +190,23 @@ namespace Library
                 Console.WriteLine(ex.Message);
             }
         }
+
+        public static void RemoveBookMenu(Library lib)
+        {
+            try
+            {
+                Console.WriteLine("What is the title of the book");
+                string title = Console.ReadLine();
+                lib.RemoveBook(lib.GetBook(title));
+            }
+            catch (ArgumentException ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+            finally
+            {
+                MainMenu(lib);
+            }
+        }
     }
 }
